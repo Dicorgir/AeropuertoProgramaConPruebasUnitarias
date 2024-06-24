@@ -1,0 +1,106 @@
+﻿<Window x:Class="Login.VentanaTablas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="VentanaTablas" Height="433" Width="800" Icon="C:\Users\dicor\OneDrive\Escritorio\CURSOS DE OPENWEBINAR\Curso de C#\Login\logoAeropuerto.ico"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <TabControl.Background>
+                <ImageBrush ImageSource="/fondoPestanaPasajeros.jpg"/>
+            </TabControl.Background>
+            <TabItem Header="Pestaña Tripulación">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/fondoPestanaTripulacion.jpg"/>
+                    </Grid.Background>
+                    <Label Content="TRIPULACIÓN" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,0" Foreground="White" FontWeight="Black" Background="Gray"/>
+                    <DataGrid x:Name="tablaTripulacion" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,66,0,0" AutoGenerateColumns="False" Height="224" Width="669" SelectionChanged="tablaTripulacion_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID Tripulante" Binding="{Binding id_Tripulante}"/>
+                            <DataGridTextColumn Header="Categoría" Binding="{Binding Categoria}"/>
+                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                            <DataGridTextColumn Header="Apellido1" Binding="{Binding Apellido1}"/>
+                            <DataGridTextColumn Header="Apellido2" Binding="{Binding Apellido2}"/>
+                            <DataGridTextColumn Header="DNI" Binding="{Binding DNI}"/>
+                            <DataGridTextColumn Header="Edad" Binding="{Binding Edad}"/>
+                            <DataGridTextColumn Header="Teléfono" Binding="{Binding Telefono}"/>
+                            <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
+                            <DataGridTextColumn Header="Dirección" Binding="{Binding Direccion}"/>
+                            <DataGridTextColumn Header="Información Adicional" Binding="{Binding InformacionAdicional}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnAnadirTripulacion" Content="AÑADIR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,329,0,0" Height="25" Width="67" Background="#039BE5" Foreground="White" Click="btnAnadirTripulacion_Click" FontWeight="Bold"/>
+                    <Button x:Name="btnModificarTripulacion" Content="MODIFICAR" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,329,0,0" Background="#039BE5" Foreground="White" Height="25" Width="86" Click="btnModificarTripulacion_Click" FontWeight="Bold"/>
+                    <Button x:Name="btnBorrarTripulacion" Content="BORRAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="546,329,0,0" Height="25" Width="67" Background="#ba4453" Foreground="White" FontWeight="Bold" Click="btnBorrarTripulacion_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pestaña Pasajeros">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/fondoPestanaPasajeros.jpg"/>
+                    </Grid.Background>
+                    <Label Content="PASAJEROS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24" FontWeight="Black" Foreground="White" Background="Gray"/>
+                    <DataGrid x:Name="tablaPasajeros" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,66,0,0" AutoGenerateColumns="False" Height="224" Width="669">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="col_ID" Header="idpasajero" Width="75" Binding="{Binding idPasajero}"/>
+                            <DataGridTextColumn x:Name="colDni" Header="DNI" Width="75" Binding="{Binding DNI}"/>
+                            <DataGridTextColumn x:Name="colNombre" Header="Nombre" Width="75" Binding="{Binding Nombre}"/>
+                            <DataGridTextColumn x:Name="colApellido" Header="Apellido 1" Width="75" Binding="{Binding Apellido1}"/>
+                            <DataGridTextColumn x:Name="colApellido2" Header="Apellido 2" Width="75" Binding="{Binding Apellido2}"/>
+                            <DataGridTextColumn x:Name="colEdad" Header="Edad" Width="75" Binding="{Binding Edad}"/>
+                            <DataGridTextColumn x:Name="colCorreo" Header="Correo" Width="75" Binding="{Binding Correo}"/>
+                            <DataGridTextColumn x:Name="colDireccion" Header="Dirección" Width="75" Binding="{Binding Direccion}"/>
+                            <DataGridTextColumn x:Name="colTelefono" Header="Teléfono" Width="75" Binding="{Binding Telefono}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnAnadirPasajeros" Content="AÑADIR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,329,0,0" Click="btnAnadirPasajeros_Click" Height="25" Width="67" Background="#039BE5" Foreground="White" FontWeight="Bold"/>
+                    <Button x:Name="btnModificarPasajeros" Content="MODIFICAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="344,329,0,0" Click="btnModificarPasajeros_Click" Height="25" Width="86" Foreground="White" Background="#039BE5" FontWeight="Bold"/>
+                    <Button x:Name="btnBorrarPasajeros" Content="BORRAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="547,329,0,0" Click="btnBorrarPasajeros_Click" Height="25" Width="67" Foreground="White" FontWeight="Bold" Background="#ba4453"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pestaña Vuelos">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/fondoPestanaVuelo.jpg"/>
+                    </Grid.Background>
+                    <Label Content="VUELOS OPERATIVOS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24" Foreground="White" FontWeight="Black" Background="Gray"/>
+                    <DataGrid x:Name="tablaVuelos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,66,0,0" AutoGenerateColumns="False" Height="224" Width="669">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="col_IdVuelo" Header="idVuelo" Width="93" Binding="{Binding idVuelo}"/>
+                            <DataGridTextColumn x:Name="col_IdAvion" Header="idAvión" Width="83" Binding="{Binding idAvion}"/>
+                            <DataGridTextColumn x:Name="colOrigen" Header="Origen" Width="87" Binding="{Binding Origen}"/>
+                            <DataGridTextColumn x:Name="colDestino" Header="Destino" Width="87" Binding="{Binding Destino}"/>
+                            <DataGridTextColumn x:Name="colFecha" Header="Fecha" Width="95" Binding="{Binding Fecha}"/>
+                            <DataGridTextColumn x:Name="colHoraSal" Header="Hora de Salida" Width="108" Binding="{Binding HoraSalida}"/>
+                            <DataGridTextColumn x:Name="colHoraLl" Header="Hora de Llegada" Width="112" Binding="{Binding HoraLlegada}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnAnadirVuelos" Content="AÑADIR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,329,0,0" Click="btnAnadirVuelos_Click" Height="25" Width="67" Background="#039BE5" Foreground="White" FontWeight="Bold"/>
+                    <Button x:Name="btnModificarVuelos" Content="MODIFICAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="344,329,0,0" Click="btnModificarVuelos_Click" Height="25" Width="86" Foreground="White" Background="#039BE5" FontWeight="Bold"/>
+                    <Button x:Name="btnBorrarVuelos" Content="BORRAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="572,329,0,0" Click="btnBorrarVuelos_Click" Height="25" Width="67" Foreground="White" FontWeight="Bold" Background="#ba4453"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pestaña Aviones">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/fondoPestanaPasajeros.jpg"/>
+                    </Grid.Background>
+                    <Label Content="AVIONES" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,0" Foreground="White" FontWeight="Black" Background="Gray"/>
+                    <DataGrid x:Name="tablaAviones" HorizontalAlignment="Center" VerticalAlignment="Center" AutoGenerateColumns="False" Height="224" Width="302" SelectionChanged="tablaAviones_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID Avion" Binding="{Binding idAvion}"/>
+                            <DataGridTextColumn Header="Matrícula" Binding="{Binding matricula}"/>
+                            <DataGridTextColumn Header="Modelo" Binding="{Binding modelo}"/>
+                            <DataGridTextColumn Header="Asientos" Binding="{Binding asientos}"/>
+                            <DataGridTextColumn Header="Estado" Binding="{Binding estado}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

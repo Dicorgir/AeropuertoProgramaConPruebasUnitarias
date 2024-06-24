@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="candado.png" />
+    <None Remove="fondoAeropuerto.png" />
+    <None Remove="fondoAlta.jpg" />
+    <None Remove="fondoAnadir.png" />
+    <None Remove="fondoModificar.png" />
+    <None Remove="fondoPestanaPasajeros.jpg" />
+    <None Remove="fondoPestanaTripulacion.jpg" />
+    <None Remove="fondoPestanaVuelo.jpg" />
+    <None Remove="logoAeropuerto.png" />
+    <None Remove="posibleFondoLogin.jpg" />
+    <None Remove="Usuario.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="candado.png" />
+    <Resource Include="fondoAeropuerto.png" />
+    <Resource Include="fondoAlta.jpg" />
+    <Resource Include="fondoAnadir.png" />
+    <Resource Include="fondoModificar.png" />
+    <Resource Include="fondoPestanaPasajeros.jpg" />
+    <Resource Include="fondoPestanaTripulacion.jpg" />
+    <Resource Include="fondoPestanaVuelo.jpg" />
+    <Resource Include="logoAeropuerto.png" />
+    <Resource Include="posibleFondoLogin.jpg" />
+    <Resource Include="Usuario.png" />
+  </ItemGroup>
+
+</Project>

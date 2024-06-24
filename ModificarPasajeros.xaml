@@ -1,0 +1,35 @@
+﻿<Window x:Class="Login.ModificarPasajeros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="ModificarPasajeros" Height="735" Width="705" Icon="C:\Users\dicor\OneDrive\Escritorio\CURSOS DE OPENWEBINAR\Curso de C#\Login\logoAeropuerto.ico"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/fondoModificar.png"/>
+        </Grid.Background>
+        <Button x:Name="bttLimpiarPs" Content="LIMPIAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="456,644,0,0" Height="30" Width="78" Background="#9c540c" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="bttAceptarPS" Content="ACEPTAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="203,644,0,0" Height="30" Width="76" Background="#6e3715" Foreground="White" FontWeight="Bold" Click="bttAceptarPS_Click"/>
+        <Label Content="Información adicional:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="564,98"/>
+        <TextBox x:Name="txtDireccPs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="299,571,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtEmailPs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,503,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,435,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtEda" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,363,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtDniPs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,290,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtSnApellPs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,222,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtPrApellPs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,157,0,0" Height="31" Width="263"/>
+        <TextBox x:Name="txtNombrePs" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,101,0,0" Height="31" Width="263"/>
+        <Label Content="Modificar Pasajero" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="249,28,0,0" Width="248" FontSize="24" Foreground="#110169" FontWeight="Black"/>
+        <Label Content="Dirección:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,576,0,0" Height="26" Foreground="White" Background="#4f4d4d" FontWeight="Bold"/>
+        <Label Content="Correo electrónico:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="144,508,0,0" Height="26" Foreground="White" Background="#4f4d4d" FontWeight="Bold"/>
+        <Label Content="Teléfono:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="144,437,0,0" Height="26" Foreground="White" Background="#4f4d4d" FontWeight="Bold"/>
+        <Label Content="DNI:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,295,0,0" FontWeight="Bold" Foreground="White" Background="#4f4d4d"/>
+        <Label Content="Edad:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="143,368,0,0" Height="26" Background="#4f4d4d" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Segundo Apellido:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,227,0,0" Foreground="White" Background="#4f4d4d" FontWeight="Bold"/>
+        <Label Content="Primer Apellido:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,162,0,0" Background="#4f4d4d" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,101,0,0" Foreground="White" FontWeight="Bold" Background="#4f4d4d"/>
+    </Grid>
+</Window>

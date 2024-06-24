@@ -1,0 +1,112 @@
+﻿<Window x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="LOGIN AEROPUERTO" Height="588" Width="400" Icon="C:\Users\dicor\OneDrive\Escritorio\CURSOS DE OPENWEBINAR\Curso de C#\Login\logoAeropuerto.ico"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="RoundCornerTextBox" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RoundCornerPasswordBox" TargetType="PasswordBox">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundCornerButton" TargetType="Button">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        Background="{TemplateBinding Background}" 
+                        CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundCornerRectangle" TargetType="Rectangle">
+            <Setter Property="Stroke" Value="Gray"/>
+            <Setter Property="RadiusX" Value="5"/>
+            <Setter Property="RadiusY" Value="5"/>
+            <Setter Property="Fill" Value="White"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/posibleFondoLogin.jpg"/>
+        </Grid.Background>
+        <Image Margin="119,21,119,395" Source="/logoAeropuerto.png" Stretch="Fill"/>
+        <GroupBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0" Background="#b1bac8" Width="248">
+            <GroupBox.Header>
+                <TextBlock Text=" BIENVENIDO" FontSize="23" Foreground="#110169" FontWeight="Bold" FontStyle="Italic" />
+            </GroupBox.Header>
+            <Grid Height="305">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Style="{StaticResource RoundCornerRectangle}" HorizontalAlignment="Left" Height="40" Margin="15,0,0,0" VerticalAlignment="Center" Width="44">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/Usuario.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="cuadroUsuario" Style="{StaticResource RoundCornerTextBox}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="153" Height="40" Margin="59,0,0,0" Grid.ColumnSpan="2"/>
+                <PasswordBox x:Name="cuadroContra" Style="{StaticResource RoundCornerPasswordBox}" Grid.Row="1" HorizontalAlignment="Left" Margin="59,0,0,0" VerticalAlignment="Top" Width="153" Height="41" Grid.ColumnSpan="2"/>
+                <Button x:Name="botonLogin" Style="{StaticResource RoundCornerButton}" Content="LOGIN" HorizontalAlignment="Left" Margin="24,77,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="187" Height="36" Click="botonLogin_Click"/>
+                <Button x:Name="botonRegistrarse" Style="{StaticResource RoundCornerButton}" Content="REGISTRARSE" HorizontalAlignment="Left" Margin="24,140,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="188" Height="36" Click="botonRegistrarse_Click"/>
+                <Rectangle Style="{StaticResource RoundCornerRectangle}" HorizontalAlignment="Left" Height="40" Margin="15,1,0,0" VerticalAlignment="Top" Width="44" Grid.Row="1">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/candado.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

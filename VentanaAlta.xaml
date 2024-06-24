@@ -1,0 +1,28 @@
+﻿<Window x:Class="Login.VentanaAlta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d" Icon="C:\Users\dicor\OneDrive\Escritorio\CURSOS DE OPENWEBINAR\Curso de C#\Login\logoAeropuerto.ico"
+        Title="VentanaAlta" Height="370" Width="555"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/fondoAlta.jpg"/>
+        </Grid.Background>
+        <Label Content="DARSE DE ALTA" HorizontalAlignment="Left" Margin="55,30,0,0" VerticalAlignment="Top" Width="266" Foreground="#110169" FontSize="23" FontWeight="Bold"/>
+        <TextBox x:Name="cuadroPonerNombre" HorizontalAlignment="Left" Margin="60,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="28"/>
+        <Label Content="Poner nombre:" HorizontalAlignment="Left" Margin="55,84,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Poner apellidos:" HorizontalAlignment="Left" Margin="55,151,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="cuadroPonerApellidos" HorizontalAlignment="Left" Margin="60,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="28"/>
+        <Label Content="Poner correo:" HorizontalAlignment="Left" Margin="55,217,0,0" VerticalAlignment="Top" Foreground="White" />
+        <TextBox x:Name="cuadroPonerCorreo" HorizontalAlignment="Left" Margin="60,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="28"/>
+        <Label Content="Poner usuario:" HorizontalAlignment="Left" Margin="325,84,0,0" VerticalAlignment="Top" Foreground="White" />
+        <TextBox x:Name="cuadroPonerUsuario" HorizontalAlignment="Left" Margin="330,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="28"/>
+        <Label Content="Poner contraseña:" HorizontalAlignment="Left" Margin="325,151,0,0" VerticalAlignment="Top" Foreground="White" />
+        <PasswordBox x:Name="cuadroPonerContra" HorizontalAlignment="Left" Margin="330,177,0,0" VerticalAlignment="Top" Width="154" Height="28"/>
+        <Button x:Name="botonGuardarDatos" Content="GUARDAR DATOS" HorizontalAlignment="Left" Margin="328,243,0,0" VerticalAlignment="Top" Width="156" Height="28" Foreground="White" Background="Gray" FontWeight="Bold" Click="botonGuardarDatos_Click"/>
+
+    </Grid>
+</Window>
